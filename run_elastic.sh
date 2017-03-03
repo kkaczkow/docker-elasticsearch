@@ -1,1 +1,5 @@
-docker run --rm -ti -p 9200:9200 -v /Users/kkaczkow/development/workspace/search:/usr/share/elasticsearch/search my-es-image
+#!/bin/bash
+
+PROJECT_LOCATION="/home/kkaczkow/development/search"
+
+docker run --rm -ti -p 9200:9200 -v ${PROJECT_LOCATION}:/usr/share/elasticsearch/search --name elastic kkaczkow/elasticsearch
